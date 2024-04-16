@@ -1,0 +1,62 @@
+.input-section {
+  /* Move the section to the right side */
+  float: right;
+  /* Adjust margin or padding for better positioning */
+  margin-top: 200px; /* Add some margin for spacing */
+  margin-right: 150px;
+}
+
+.username,
+.password {
+  /* Style username and password sections */
+  margin-bottom: 20px; /* Add spacing between sections */
+}
+
+.username label,
+.password label {
+  display: block;
+  margin-bottom: 10px; /* Reduce margin to 10px or your desired value */
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+
+.username input,
+.password input {
+  width: 350px; /* Increase input width */
+  padding: 10px 20px; /* Add padding for better user experience */
+  border: 1px solid #D0D5DD;
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 16px;
+}
+.btn {
+  background-color: #1366D9;
+  width: 400px;
+  color: white;
+  padding: 15px 30px; /* Increase padding for wider button */
+  border: none;
+  border-radius: 5px; /* Make button rounder */
+  cursor: pointer;
+  position: absolute; /* Use absolute positioning */
+  bottom: 400px; /* Position from the bottom */
+  right: 245px; /* Position from the right */
+  font-size: 16px;
+}
+.input-section{
+  position: absolute;
+  margin-top: 300px;
+  right: 100px;
+}
+.Login-text1,
+.Login-text2 {
+  position: absolute;
+}
+.Login-text1 {
+  left: 1200px;
+  top: 220px;
+}
+.Login-text2{
+  left: 1150px;
+  top: 270px;
+}
+

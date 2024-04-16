@@ -34,7 +34,16 @@ function Login() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="username">Username:</label>
+        <div className='Login-text1'>
+          Log in to your account
+        </div>
+        <div className='Login-text2'>
+          Welcome back! please enter your details.
+        </div>
+      </div>
+      <div className='input-section'>
+      <div className='username'>
+        <label htmlFor="username">Username</label>
         <input
           type="text"
           id="username"
@@ -43,8 +52,8 @@ function Login() {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label htmlFor="password">Password:</label>
+      <div className='password'>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           id="password"
@@ -53,7 +62,8 @@ function Login() {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Login</button>
+      </div>
+      <button className='btn' type="submit">Login</button>
     </form>
   );
 }
