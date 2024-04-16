@@ -1,8 +1,8 @@
 .logo1 {
   position: absolute;
-  width: 1px; /* Adjust the value */
   left: -13%;
-  top: -300px;
+  /* top: -300px; */
+  margin-bottom: -450px;
 }
 
 .container {
@@ -45,7 +45,7 @@
 }
 .btn {
   background-color: black;
-  width: 400px;
+  width: 395px;
   color: white;
   padding: 15px 30px; /* Increase padding for wider button */
   border: none;
@@ -53,7 +53,7 @@
   cursor: pointer;
   position: absolute; /* Use absolute positioning */
   bottom: 400px; /* Position from the bottom */
-  right: 150px; /* Position from the right */
+  right: 160px; /* Position from the right */
   font-size: 16px;
 }
 .btn:hover {
