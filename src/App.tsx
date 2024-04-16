@@ -50,6 +50,7 @@ function Login() {
           name="username"
           value={formData.username}
           onChange={handleChange}
+          placeholder="Enter your username" 
         />
       </div>
       <div className='password'>
@@ -60,6 +61,7 @@ function Login() {
           name="password"
           value={formData.password}
           onChange={handleChange}
+          placeholder="Enter your password" 
         />
       </div>
       </div>

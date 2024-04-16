@@ -16,8 +16,9 @@
 .password label {
   display: block;
   margin-bottom: 10px; /* Reduce margin to 10px or your desired value */
-  font-weight: bold;
+  /* font-weight: bold; */
   padding-bottom: 5px;
+  font-family: sans-serif;
 }
 
 
@@ -52,11 +53,15 @@
   position: absolute;
 }
 .Login-text1 {
-  left: 1200px;
-  top: 220px;
+  left: 1110px;
+  top: 210px;
+  font-size: 38px;
+  font-family: sans-serif;
 }
 .Login-text2{
   left: 1150px;
   top: 270px;
+  color: grey;
+  font-family: sans-serif;
 }
 
