@@ -75,3 +75,43 @@ span {
     height: 20px;
     margin-bottom: -3px;
 }
+
+                        /* TABLET RESPONSIVENESS {** ##just trying stuffs**} */
+                        
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Sidebar{
+        min-height: 80vh;
+    }
+  }
+                     /* PHONE RESPOSIVENESS {** ##just trying stuffs**} */
+
+  @media only screen and (max-width: 767px) {
+    .Sidebar{
+        min-height: 80vh;
+    }
+    .Sidebar .top {
+        height: 25px;
+        padding: 1px;
+        display: flex;
+        padding: 4px,12px,4px,12px;
+        margin-left: 15px;
+        margin-top: 12px;
+    }
+    .Sidebar{
+        background-color: white;
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px,24px,32px,24px;
+        width: 180px;
+        margin-left: -7.9px;
+        margin-top: -10px;
+    }
+    .Sidebar .center{
+        padding-left: 1px;
+    }
+    .Sidebar .center2{
+        padding-left: 1px;
+    }
+  }
+  
