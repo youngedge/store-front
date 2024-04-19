@@ -1,8 +1,11 @@
+
 .logo1 {
-    position: absolute;
-    left: -13%;
-    /* top: -300px; */
-    margin-bottom: -450px;
+  height: 140px;
+  padding: 1px;
+  display: flex;
+  padding: 4px,12px,4px,12px;
+  margin-left: 15px;
+  margin-top: 250px;
   }
   
   .container {
@@ -15,8 +18,9 @@
     /* Move the section to the right side */
     float: right;
     /* Adjust margin or padding for better positioning */
-    margin-top: 200px; /* Add some margin for spacing */
+    margin-top: 10px; /* Add some margin for spacing */
     margin-right: 150px;
+    margin-bottom: 25%;
   }
   
   .username,

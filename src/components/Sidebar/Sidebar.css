@@ -77,8 +77,14 @@ span {
 }
 
                         /* TABLET RESPONSIVENESS {** ##just trying stuffs**} */
-                        
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Sidebar{
+        min-height: 70vh;
+    }
+  }
+
+  @media only screen and (max-width: 1133px) {
     .Sidebar{
         min-height: 80vh;
     }

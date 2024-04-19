@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 import './Login.css';
 
 interface LoginFormState {
