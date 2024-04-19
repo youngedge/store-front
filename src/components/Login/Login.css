@@ -1,0 +1,84 @@
+.logo1 {
+    position: absolute;
+    left: -13%;
+    /* top: -300px; */
+    margin-bottom: -450px;
+  }
+  
+  .container {
+    display: flex; /* Allow horizontal layout */
+    align-items: center; /* Vertically center elements (optional) */
+    overflow-y: auto; /* Allow vertical scroll if content overflows */
+  }
+  
+  .input-section {
+    /* Move the section to the right side */
+    float: right;
+    /* Adjust margin or padding for better positioning */
+    margin-top: 200px; /* Add some margin for spacing */
+    margin-right: 150px;
+  }
+  
+  .username,
+  .password {
+    /* Style username and password sections */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+  
+  .username label,
+  .password label {
+    display: block;
+    margin-bottom: 10px; /* Reduce margin to 10px or your desired value */
+    /* font-weight: bold; */
+    padding-bottom: 5px;
+    font-family: sans-serif;
+  }
+  
+  
+  .username input,
+  .password input {
+    width: 350px; /* Increase input width */
+    padding: 10px 20px; /* Add padding for better user experience */
+    border: 1px solid #D0D5DD;
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px;
+  }
+  .btn {
+    background-color: black;
+    width: 395px;
+    color: white;
+    padding: 15px 30px; /* Increase padding for wider button */
+    border: none;
+    border-radius: 5px; /* Make button rounder */
+    cursor: pointer;
+    position: absolute; /* Use absolute positioning */
+    bottom: 400px; /* Position from the bottom */
+    right: 160px; /* Position from the right */
+    font-size: 16px;
+  }
+  .btn:hover {
+    background-color: grey;
+  }
+  .input-section{
+    position: absolute;
+    margin-top: 850px;
+    right: 10px;
+  }
+  .Login-text1,
+  .Login-text2 {
+    position: absolute;
+  }
+  .Login-text1 {
+    left: 1190px;
+    top: 210px;
+    font-size: 38px;
+    font-family: sans-serif;
+  }
+  .Login-text2{
+    left: 1220px;
+    top: 280px;
+    color: grey;
+    font-family: sans-serif;
+  }
+  
+  

@@ -1,0 +1,13 @@
+body{
+    background-color: whitesmoke;
+    flex: 6;
+}
+.container {
+    display: flex;
+
+}
+
+/* .container .wrapper{
+    background-color: gray;
+    flex: 6;
+} */

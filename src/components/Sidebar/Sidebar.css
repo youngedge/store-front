@@ -1,0 +1,77 @@
+.Sidebar{
+    background-color: white;
+    flex: 2;
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px,24px,32px,24px;
+    width: 275px;
+    margin-left: -7.9px;
+    margin-top: -10px;
+
+}
+.Sidebar .top {
+    height: 40px;
+    padding: 1px;
+    display: flex;
+    padding: 4px,12px,4px,12px;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+.Sidebar .center {
+    padding-left: 30px;
+}
+.Sidebar .center2 {
+    padding-left: 30px;
+}
+
+.center {
+    position: absolute;
+}
+
+.center ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+li .icon {
+    color: #8e9ab0;
+}
+
+ul :hover{
+    color: grey;
+}
+
+span {
+    margin-left: 10px;
+    color: Grey/grey-600;
+}
+.center2{
+    position: absolute;
+    
+}
+.center2 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 600px;
+
+}
+.icon1 ,.icon2 ,.icon3 ,.icon4 ,.icon5 ,.icon6 ,.icon7 ,.icon8{
+    width: 25px;
+    height: 20px;
+    margin-bottom: -3px;
+}
