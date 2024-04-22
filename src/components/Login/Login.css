@@ -1,4 +1,6 @@
-
+body{
+  background-color: white;
+}
 .logo1 {
   height: 140px;
   padding: 1px;
@@ -18,7 +20,7 @@
     /* Move the section to the right side */
     float: right;
     /* Adjust margin or padding for better positioning */
-    margin-top: 10px; /* Add some margin for spacing */
+    /* margin-top: 10px; Add some margin for spacing */
     margin-right: 150px;
     margin-bottom: 25%;
   }

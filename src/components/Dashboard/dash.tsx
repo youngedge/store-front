@@ -8,7 +8,7 @@ const Dash = () => {
     return (
         <div className="Container" >
             <Sidebar />
-            {/* <Navbar /> */}
+            <Navbar />
         </div>
     );
 }
