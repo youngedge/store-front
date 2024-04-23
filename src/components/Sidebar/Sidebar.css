@@ -1,7 +1,7 @@
 .Sidebar{
     background-color: white;
     flex: 2;
-    min-height: 75vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     padding: 24px,24px,32px,24px;
@@ -67,7 +67,7 @@ span {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 600px;
+    margin-top: 830px;
 
 }
 .icon1 ,.icon2 ,.icon3 ,.icon4 ,.icon5 ,.icon6 ,.icon7 ,.icon8{
