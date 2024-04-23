@@ -1,33 +1,33 @@
-.Sidebar{
+.Sidebar {
     background-color: white;
     flex: 2;
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
-    padding: 24px,24px,32px,24px;
-    width: 275px;
+    padding: 24px;
+    width: 225px;
     margin-left: -7.9px;
     margin-top: -10px;
-
 }
+
 .Sidebar .top {
     height: 40px;
     padding: 1px;
     display: flex;
-    padding: 4px,12px,4px,12px;
-    margin-left: 15px;
+    padding: 4px 12px;
+    margin-left: -20px;
     margin-top: 12px;
 }
 
 .Sidebar .center {
     padding-left: 30px;
-}
-.Sidebar .center2 {
-    padding-left: 30px;
+    position: absolute; /* Retained absolute positioning */
 }
 
-.center {
-    position: absolute;
+.Sidebar .center2 {
+    left: 14px;
+    position: absolute; /* Retained absolute positioning */
+    top: 850px;
 }
 
 .center ul {
@@ -40,84 +40,55 @@
 ul li {
     display: flex;
     align-items: center;
-    padding: 20px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     font-family: sans-serif;
+    padding: 20px; /* Adjusted padding for better click area */
 }
 
 li .icon {
     color: #8e9ab0;
 }
 
-ul :hover{
-    color: grey;
-}
-
 span {
     margin-left: 10px;
-    color: Grey/grey-600;
-}
-.center2{
-    position: absolute;
-    
-}
-.center2 ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 830px;
-
-}
-.icon1 ,.icon2 ,.icon3 ,.icon4 ,.icon5 ,.icon6 ,.icon7 ,.icon8{
-    width: 25px;
-    height: 20px;
-    margin-bottom: -3px;
+    color: #696969; /* Adjusted to a specific grey color */
 }
 
-                        /* TABLET RESPONSIVENESS {** ##just trying stuffs**} */
+/* Add hover effect */
+li:hover {
+    background-color: #f0f0f0;
+}
 
+/* Adjust responsiveness as needed */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .Sidebar{
+    .Sidebar {
         min-height: 70vh;
     }
-  }
+}
 
-  @media only screen and (max-width: 1133px) {
-    .Sidebar{
+@media only screen and (max-width: 1133px) {
+    .Sidebar {
         min-height: 80vh;
     }
-  }
-                     /* PHONE RESPOSIVENESS {** ##just trying stuffs**} */
+}
 
-  @media only screen and (max-width: 767px) {
-    .Sidebar{
+@media only screen and (max-width: 767px) {
+    .Sidebar {
         min-height: 80vh;
+        width: 180px;
     }
     .Sidebar .top {
         height: 25px;
-        padding: 1px;
-        display: flex;
-        padding: 4px,12px,4px,12px;
+        padding: 4px 12px;
         margin-left: 15px;
         margin-top: 12px;
     }
-    .Sidebar{
-        background-color: white;
-        flex: 2;
-        display: flex;
-        justify-content: space-between;
-        padding: 24px,24px,32px,24px;
-        width: 180px;
-        margin-left: -7.9px;
-        margin-top: -10px;
-    }
-    .Sidebar .center{
+    .Sidebar .center {
         padding-left: 1px;
     }
-    .Sidebar .center2{
+    .Sidebar .center2 {
         padding-left: 1px;
     }
-  }
-  
+}

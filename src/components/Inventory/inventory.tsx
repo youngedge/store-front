@@ -3,7 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Navbar from "../Navbar/Navbar";
 
 
-const orders = () => {
+const inventory = () => {
     return (
         <div className="Container" >
             <Sidebar />
@@ -11,4 +11,4 @@ const orders = () => {
 </div>
     );
 }
-export default orders;
+export default inventory;
