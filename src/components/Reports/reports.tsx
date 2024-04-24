@@ -9,12 +9,16 @@ const reports = () => {
             <Sidebar />
             <Navbar />
             <div className="reports-widget1">
+                <h2 className="orders-text1">Overview</h2>
                 </div>
                 <div className="reports-widget2">
+                    <h2 className="orders-text2">Best Selling Category</h2>
                 </div>
                 <div className="reports-widget3">
+                    <h2 className="orders-text3">Profit & Revenue</h2>
                 </div>
                 <div className="reports-widget4">
+                    <h2 className="orders-text4">Best Selling Product</h2>
                 </div>
 </div>
     );

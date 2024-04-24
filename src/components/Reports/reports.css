@@ -54,3 +54,17 @@
     padding-left: 10px;
     justify-content: space-between;
 }
+.orders-text1,
+.orders-text2,
+.orders-text3,
+.orders-text4{
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    margin-left: 1%;
+}
+.orders-text3,
+.orders-text4{
+    position: relative;
+    top: 10px;
+}
