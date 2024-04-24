@@ -21,12 +21,12 @@
 
 .Sidebar .center {
     padding-left: 30px;
-    position: absolute; /* Retained absolute positioning */
+    position: absolute; 
 }
 
 .Sidebar .center2 {
     left: 14px;
-    position: absolute; /* Retained absolute positioning */
+    position: absolute; 
     top: 800px;
 }
 
@@ -44,7 +44,7 @@ ul li {
     font-size: 16px;
     font-weight: 500;
     font-family: sans-serif;
-    padding: 25px; /* Adjusted padding for better click area */
+    padding: 25px; 
 }
 
 li .icon {
@@ -53,15 +53,15 @@ li .icon {
 
 span {
     margin-left: 10px;
-    color: #696969; /* Adjusted to a specific grey color */
+    color: #696969; 
 }
 
 /* Add hover effect */
-li:hover {
-    background-color: #f0f0f0;
+ul li:hover span {
+    color: black; 
 }
 
-/* Adjust responsiveness as needed */
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .Sidebar {
         min-height: 70vh;
