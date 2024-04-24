@@ -1,0 +1,9 @@
+.management-widget{
+    background-color: white;
+    width: 1370px;
+    height: 890px;
+    position: absolute;
+    top: 100px;
+    margin-left: 320px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}

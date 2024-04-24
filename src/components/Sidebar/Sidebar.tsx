@@ -15,9 +15,14 @@ export const Sidebar = () => {
   const navigate = useNavigate();
 
   // Renamed functions to reflect their purposes
-  const handleDashboardClick = () => { navigate("/dashboard") }; // Assuming path is "/dashboard"
-  const handleInventoryClick = () => { navigate("/inventory") }; // Assuming path is "/inventory"
-
+  const handleDashboardClick = () => { navigate("/dashboard") };
+  const handleInventoryClick = () => { navigate("/inventory") }; 
+  const handleReportsClick = () => { navigate("/reports")}
+  const handleOrdersClick =  () => { navigate("/orders") }; 
+  const handleSupplyClick = () => {navigate("/supply")}
+  const handleManagementClick = () => { navigate("/management") };
+  const handleSettingsClick = () => { navigate("/settings") };
+  const handleLogoutClick = () => { navigate("/") };
   return (
     <div className='Sidebar'>
       <div className="top">
@@ -31,26 +36,26 @@ export const Sidebar = () => {
           <li onClick={handleInventoryClick}>
             <span><GiHandTruck className='icon2'/> Inventory </span>
           </li>
-          <li>
+          <li onClick={handleReportsClick}>
             <span><IoBarChartOutline className='icon3' /> Reports </span>
           </li>
-          <li>
+          <li onClick={handleSupplyClick}>
             <span><FaRegUserCircle className='icon4'/> Suppliers </span>
           </li>
-          <li>
+          <li onClick={handleOrdersClick}>
             <span><BsBox className='icon5'/> Orders </span>
           </li>
-          <li>
+          <li onClick={handleManagementClick}>
             <span><GoChecklist className='icon6'/> Manage Stores </span>
           </li>
         </ul>
       </div>
       <div className='center2'>
         <ul>
-          <li>
+          <li onClick={handleSettingsClick}>
             <span><IoSettingsOutline className='icon7'/> Settings </span>
           </li>
-          <li>
+          <li onClick={handleLogoutClick}>
             <span><MdOutlineLogout className='icon8'/> Logout </span>
           </li>
         </ul>

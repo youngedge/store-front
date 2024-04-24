@@ -1,7 +1,7 @@
 .Sidebar {
     background-color: white;
     flex: 2;
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex;
     justify-content: space-between;
     padding: 24px;
@@ -16,7 +16,7 @@
     display: flex;
     padding: 4px 12px;
     margin-left: -20px;
-    margin-top: 12px;
+    margin-top: -10px;
 }
 
 .Sidebar .center {
@@ -27,7 +27,7 @@
 .Sidebar .center2 {
     left: 14px;
     position: absolute; /* Retained absolute positioning */
-    top: 850px;
+    top: 800px;
 }
 
 .center ul {
@@ -44,7 +44,7 @@ ul li {
     font-size: 16px;
     font-weight: 500;
     font-family: sans-serif;
-    padding: 20px; /* Adjusted padding for better click area */
+    padding: 25px; /* Adjusted padding for better click area */
 }
 
 li .icon {

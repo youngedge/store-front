@@ -1,0 +1,56 @@
+.reports-widget1{
+    width: 650px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: left;
+    left: 17%;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+.reports-widget2{
+    width: 650px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
+    left: -0.5%;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+.reports-widget3{
+    width: 1385px;
+    height: 350px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-right: 20px;
+    margin-top: 250px;
+    float: center;
+    left: 17%;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+.reports-widget4{
+    width: 1385px;
+    height: 270px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-right: 20px;
+    margin-top: 30px;
+    float: center;
+    left: 17%;
+    padding-left: 10px;
+    justify-content: space-between;
+}

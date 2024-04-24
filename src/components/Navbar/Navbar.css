@@ -1,9 +1,9 @@
 .nav-bar {
-    background-color: white;
+    background-color: white;  
     display: flex;
     justify-content: space-between;
     padding: 25px 20px;
-    margin-top: -1040px;
+    margin-top: -1000px;
     width: 82.65%;
     margin-left: 15.5%;
   }
