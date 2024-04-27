@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
+import { useNavigate } from "react-router-dom";
 import './Login.css';
 
 interface LoginFormState {
@@ -12,7 +13,6 @@ function Login() {
         username: '',
         password: '',
     });
-
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -32,7 +32,8 @@ function Login() {
             [event.target.name]: event.target.value,
         });
     };
-
+    const navigate = useNavigate();
+    const handleDashClick = () => { navigate("/dashboard") };
     return (
         <form onSubmit={handleSubmit}>
             <div className='container'> {/* New container element */}
@@ -72,7 +73,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-            <button className='btn' type="submit">Login</button>
+            <button onClick = {handleDashClick}  className='btn' type="submit">Login</button>
         </form>
     );
 }
