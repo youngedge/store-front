@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo.png';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 import './Login.css';
 
 interface LoginFormState {
@@ -13,17 +14,43 @@ function Login() {
         username: '',
         password: '',
     });
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const [error, setError] = useState<string>('');
+    const [success, setSuccess] = useState<string>('');
+    const navigate = useNavigate();
 
-        // Basic Validation (Optional)
-        if (formData.username === '' || formData.password === '') {
-            alert('Please fill in all fields');
-            return;
+    const handleLogin = async (username: string, password: string) => {
+        if (username === 'desmond001' && password === 'storefront') {
+            const token = 'fake_token';
+            localStorage.setItem('jwtToken', token);
+            localStorage.setItem('username', username);
+            setSuccess('Login successful');
+            setTimeout(() => {
+                navigate('/dashboard');
+            }, 1000);
+        } else {
+            setError('Invalid username or password');
         }
+    };
 
-        console.log('Username:', formData.username);
-        console.log('Password:', formData.password); // Remove in production
+    useEffect(() => {
+        const errorTimer = setTimeout(() => {
+            setError('');
+        }, 1000);
+
+        const successTimer = setTimeout(() => {
+            setSuccess('');
+        }, 1000);
+
+        return () => {
+            clearTimeout(errorTimer);
+            clearTimeout(successTimer);
+        };
+    }, [error, success]);
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const { username, password } = formData;
+        handleLogin(username, password);
     };
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,15 +59,14 @@ function Login() {
             [event.target.name]: event.target.value,
         });
     };
-    const navigate = useNavigate();
-    const handleDashClick = () => { navigate("/dashboard") };
+
     return (
         <form onSubmit={handleSubmit}>
-            <div className='container'> {/* New container element */}
-                <div className='logo1'> {/* Image element */}
+            <div className='container'>
+                <div className='logo1'>
                     <img src={logo} alt="Company Logo" />
                 </div>
-                <div> {/* Text section container */}
+                <div>
                     <div className='Login-text1'>
                         Log in to your account
                     </div>
@@ -48,7 +74,7 @@ function Login() {
                         Welcome back! Please enter your details.
                     </div>
                 </div>
-                <div className='input-section'> {/* Form elements container */}
+                <div className='input-section'>
                     <div className='username'>
                         <label htmlFor="username">Username</label>
                         <input
@@ -72,8 +98,10 @@ function Login() {
                         />
                     </div>
                 </div>
+                {error && <div className="error-message">{error}</div>}
+                {success && <div className="success-message">{success}</div>}
             </div>
-            <button onClick = {handleDashClick}  className='btn' type="submit">Login</button>
+            <button className='btn' type="submit">Login</button>
         </form>
     );
 }
