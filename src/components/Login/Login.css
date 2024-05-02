@@ -117,3 +117,8 @@ body {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
+.show-password{
+  position: absolute;
+  margin-left: 365px;
+  top: 139px;
+}

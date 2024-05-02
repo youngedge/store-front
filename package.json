@@ -16,6 +16,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "logrocket": "^8.1.0",
+    "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
