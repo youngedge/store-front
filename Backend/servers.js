@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const UserRoute = require("./routes/userRoute");
 const errorHandler = require("./middleWare/errorMiddleWare");
 const cors = require("cors")
-dotenv.config({ path: './config.env' });
+dotenv.config();
 
 const uri = process.env.MONGO_URI;
 const app = express();
@@ -14,25 +14,24 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 app.use(logger('dev'))
-//error middleware
-app.use(errorHandler);
-
 
 //Routes Middleware
 app.use("/api/user", UserRoute);
 
 //routes
 app.get('/', (_, res) => {
-    res.send("Home page").status(200);
+    res.send("Home page");
 });
+
+//error middleware
+app.use(errorHandler);
 
 //port
 const PORT = process.env.BACKEND_PORT || 5000;
 
-app.listen(PORT, () => {
-    mongoose.connect(uri).then(() => {
-        console.log("Database connected")
-    })
-
-    console.log(`Server is running on port ${PORT}`);
+mongoose.connect(uri).then(() => {
+    console.log("Database connected")
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
 });
