@@ -28,7 +28,7 @@ app.get('/', (_, res) => {
 });
 
 //port
-const PORT = process.env.BACKEND_PORT || 5000;
+const PORT = process.env.BACKEND_PORT || 3000;
 
 app.listen(PORT, () => {
     mongoose.connect(uri).then(() => {
