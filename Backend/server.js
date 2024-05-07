@@ -5,9 +5,10 @@ const dotenv = require('dotenv');
 const UserRoute = require("./userRoute");
 const errorHandler = require("./errorMiddleWare");
 const cors = require("cors")
-dotenv.config({ path: './config.env' });
+dotenv.config();
 
 const uri = process.env.MONGO_URI;
+console.log(uri)
 const app = express();
 
 //middlewares
