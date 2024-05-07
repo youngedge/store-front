@@ -2,8 +2,8 @@ const express = require('express');
 const logger = require("morgan")
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const UserRoute = require("./routes/userRoute");
-const errorHandler = require("./middleWare/errorMiddleWare");
+const UserRoute = require("./userRoute");
+const errorHandler = require("./errorMiddleWare");
 const cors = require("cors")
 dotenv.config({ path: './config.env' });
 
