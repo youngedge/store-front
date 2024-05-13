@@ -1,343 +1,75 @@
-body {
-  background-color: white;
+.login-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-bottom: 150px;
+  box-sizing: border-box;
 }
 
-.logo1 {
-  height: 140px;
-  padding: 1px;
+.login-section-logo {
+  width: 60%;
   display: flex;
-  padding: 4px 12px; /* Adjusted padding syntax */
-  margin-left: 15px;
-  margin-top: 250px;
-}
-
-.container {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  padding: 50px;
 }
 
-.input-section {
-  float: right;
-  margin-right: 150px;
-  margin-bottom: 25%;
+.login-section-logo img {
+  width: 700px;
 }
 
-.username,
-.password {
-  margin-bottom: 20px;
+.login-section-form-wrapper {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.username label,
-.password label {
-  display: block;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  font-family: sans-serif;
+.login-section-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.username input,
-.password input {
-  width: 350px;
-  padding: 10px 20px;
-  border: 1px solid #D0D5DD;
-  border-radius: 5px;
+.login-section-form .login-section-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+.login-section-form-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.login-section-form-heading * {
+  text-align: center;
+  margin: 0;
+}
+
+.login-section-form-heading h2 {
+  font-size: 30px;
+}
+
+.login-section-form-heading h5 {
   font-size: 16px;
 }
 
-.btn {
-  background-color: black;
-  width: 395px;
-  color: white;
-  padding: 15px 30px;
-  border: none;
+.login-section-form input, .login-section-form button {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 400px;
-  right: 160px;
-  font-size: 16px;
 }
 
-.btn:hover {
-  background-color: grey;
+.login-section-form button {
+  margin-top: 15px;
+  color: #fff;
+  background-color: #000;
+  border: #000;
 }
-
-.input-section {
-  position: absolute;
-  margin-top: 850px;
-  right: 10px;
-}
-
-.Login-text1,
-.Login-text2 {
-  position: absolute;
-}
-
-.Login-text1 {
-  left: 1190px;
-  top: 210px;
-  font-size: 38px;
-  font-family: sans-serif;
-}
-
-.Login-text2 {
-  left: 1220px;
-  top: 280px;
-  color: grey;
-  font-family: sans-serif;
-}
-
-.error-message,
-.success-message {
-  font-size: 20px;
-  font-family: sans-serif;
-  margin-bottom: 100px;
-  animation: fade-in 0.3s ease forwards;
-}
-
-.error-message {
-  color: red;
-  position: absolute;
-  left: 1240px;
-}
-
-.success-message {
-  color: green;
-  position: absolute;
-  left: 1290px;
-}
-
-@keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes fade-out {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-.show-password{
-  position: absolute;
-  margin-left: 365px;
-  top: 139px;
-}
-.loader {
-  position: absolute;
-  left: 800px;
-  display: block;
-  width: 150px;
-  height: auto;
-  bottom: 500px;
-}
-
-.loading-screen {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  background-color: white; 
-  width: 100%; 
-  height: 100%; 
-  z-index: 9999; 
-}
-.loader_body,
-  .loader_front,
-  .loader_handlebars,
-  .loader_pedals,
-  .loader_pedals-spin,
-  .loader_seat,
-  .loader_spokes,
-  .loader_spokes-spin,
-  .loader_tire {
-  animation: bikeBody 3s ease-in-out infinite;
-  stroke: var(--primary);
-  transition: stroke var(--trans-dur);
-}
-
-.loader_front {
-  animation-name: bikeFront;
-}
-
-.loader_handlebars {
-  animation-name: bikeHandlebars;
-}
-
-.loader_pedals {
-  animation-name: bikePedals;
-}
-
-.loader_pedals-spin {
-  animation-name: bikePedalsSpin;
-}
-
-.loader_seat {
-  animation-name: bikeSeat;
-}
-
-.loader_spokes,
-  .loader_tire {
-  stroke: currentColor;
-}
-
-.loader_spokes {
-  animation-name: bikeSpokes;
-}
-
-.loader_spokes-spin {
-  animation-name: bikeSpokesSpin;
-}
-
-.loader_tire {
-  animation-name: bikeTire;
-}
-
-  /* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: hsl(var(--hue), 90%, 10%);
-    --fg: hsl(var(--hue), 90%, 90%);
-  }
-}
-
-  /* Animations */
-@keyframes bikeBody {
-  from {
-    stroke-dashoffset: 79;
-  }
-
-  33%,
-    67% {
-    stroke-dashoffset: 0;
-  }
-
-  to {
-    stroke-dashoffset: -79;
-  }
-}
-
-@keyframes bikeFront {
-  from {
-    stroke-dashoffset: 19;
-  }
-
-  33%,
-    67% {
-    stroke-dashoffset: 0;
-  }
-
-  to {
-    stroke-dashoffset: -19;
-  }
-}
-
-@keyframes bikeHandlebars {
-  from {
-    stroke-dashoffset: 10;
-  }
-
-  33%,
-    67% {
-    stroke-dashoffset: 0;
-  }
-
-  to {
-    stroke-dashoffset: -10;
-  }
-}
-
-@keyframes bikePedals {
-  from {
-    animation-timing-function: ease-in;
-    stroke-dashoffset: -25.133;
-  }
-
-  33%,
-    67% {
-    animation-timing-function: ease-out;
-    stroke-dashoffset: -21.991;
-  }
-
-  to {
-    stroke-dashoffset: -25.133;
-  }
-}
-
-@keyframes bikePedalsSpin {
-  from {
-    transform: rotate(0.1875turn);
-  }
-
-  to {
-    transform: rotate(3.1875turn);
-  }
-}
-
-@keyframes bikeSeat {
-  from {
-    stroke-dashoffset: 5;
-  }
-
-  33%,
-    67% {
-    stroke-dashoffset: 0;
-  }
-
-  to {
-    stroke-dashoffset: -5;
-  }
-}
-
-@keyframes bikeSpokes {
-  from {
-    animation-timing-function: ease-in;
-    stroke-dashoffset: -31.416;
-  }
-
-  33%,
-    67% {
-    animation-timing-function: ease-out;
-    stroke-dashoffset: -23.562;
-  }
-
-  to {
-    stroke-dashoffset: -31.416;
-  }
-}
-
-@keyframes bikeSpokesSpin {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(3turn);
-  }
-}
-
-@keyframes bikeTire {
-  from {
-    animation-timing-function: ease-in;
-    stroke-dashoffset: 56.549;
-    transform: rotate(0);
-  }
-
-  33% {
-    stroke-dashoffset: 0;
-    transform: rotate(0.33turn);
-  }
-
-  67% {
-    animation-timing-function: ease-out;
-    stroke-dashoffset: 0;
-    transform: rotate(0.67turn);
-  }
-
-  to {
-    stroke-dashoffset: -56.549;
-    transform: rotate(1turn);
-  }
-}
-
-
-
