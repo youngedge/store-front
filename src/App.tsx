@@ -12,20 +12,18 @@ import Settings from './components/Settings/settings';
 function App() {
 
   return (
-    <div>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Login/>} />
-            <Route path='Dashboard' element={<Dash/>} />
-            <Route path='inventory' element={<Inventory/>}/>
-            <Route path='orders' element={<Orders/>}/>
-            <Route path='supply' element = {<Supply/>}/>
-            <Route path='reports' element = {<Reports/>}/>
-            <Route path='management' element = {<ManageStore/>}/>
-            <Route path='settings' element = {<Settings/>}/>
-          </Routes>
-        </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path='Dashboard' element={<Dash />} />
+        <Route path='inventory' element={<Inventory />} />
+        <Route path='orders' element={<Orders />} />
+        <Route path='supply' element={<Supply />} />
+        <Route path='reports' element={<Reports />} />
+        <Route path='management' element={<ManageStore />} />
+        <Route path='settings' element={<Settings />} />
+      </Routes>
+    </Router>
   )
 }
 
