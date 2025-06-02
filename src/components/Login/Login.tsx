@@ -111,7 +111,8 @@ function Login() {
                     </svg>
                 </div>
             )}
-            <div className='container'>
+            <div className="login-wrapper">
+            <div className='login-container'>
                 <div className='LogInlogo1'>
                     <img src={logo} alt="Company Logo" />
                 </div>
@@ -155,12 +156,15 @@ function Login() {
                         />
                     </div>
 
-                    <button className='btn' type="submit" disabled={loading}>Login</button>
+                                        <button type="submit" disabled={loading}>
+                        {loading ? 'Logging in...' : 'Log In'}
+                    </button>
                 </form>
 
                 <div className="redirect-login">
                     Don't have an account? <Link to="/signup">Sign Up</Link>
                 </div>
+            </div>
             </div>
         </>
     );
