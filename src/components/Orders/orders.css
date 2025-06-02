@@ -14,7 +14,7 @@
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: auto;
 }
-/* Responsive adjustments */
+/* Responsive adjustments*/
 @media (max-width: 1024px) {
   .orders-container {
     margin-left: 0;
