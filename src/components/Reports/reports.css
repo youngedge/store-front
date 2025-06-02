@@ -1,70 +1,422 @@
-.reports-widget1{
-    width: 650px;
-    height: 200px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-right: 20px;
-    margin-top: 20px;
-    float: left;
-    left: 17%;
-    padding-left: 10px;
-    justify-content: space-between;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.reports-widget2{
-    width: 650px;
-    height: 200px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-right: 20px;
-    margin-top: 20px;
-    float: right;
-    left: -0.5%;
-    padding-left: 10px;
-    justify-content: space-between;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
 }
-.reports-widget3{
-    width: 1385px;
-    height: 350px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-right: 20px;
-    margin-top: 250px;
-    float: center;
-    left: 17%;
-    padding-left: 10px;
-    justify-content: space-between;
+
+/* Container */
+.reports-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
 }
-.reports-widget4{
-    width: 1385px;
-    height: 270px;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-right: 20px;
-    margin-top: 30px;
-    float: center;
-    left: 17%;
-    padding-left: 10px;
-    justify-content: space-between;
+
+/* Layout will be handled by your existing Sidebar and Navbar components */
+
+/* Main Content - adjust based on your layout */
+.main-content {
+  padding: 32px;
 }
-.orders-text1,
-.orders-text2,
-.orders-text3,
-.orders-text4{
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
+
+/* Widgets Grid */
+.widgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 1200px) {
+  .widgets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Widget Base Styles */
+.widget {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  padding: 32px;
+  transition: box-shadow 0.3s ease;
+}
+
+.widget:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.widget-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+}
+
+.widget-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+/* Overview Widget */
+.overview-widget .widget-icon {
+  color: #3b82f6;
+}
+
+.growth-indicator {
+  display: flex;
+  align-items: center;
+  color: #059669;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.growth-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.overview-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.revenue-card {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.revenue-card .metric-label {
+  color: #2563eb;
+}
+
+.revenue-card .metric-value {
+  color: #1e40af;
+}
+
+.orders-card {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.orders-card .metric-label {
+  color: #059669;
+}
+
+.orders-card .metric-value {
+  color: #047857;
+}
+
+.customers-card {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+}
+
+.customers-card .metric-label {
+  color: #7c3aed;
+}
+
+.customers-card .metric-value {
+  color: #6d28d9;
+}
+
+.growth-card {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+
+.growth-card .metric-label {
+  color: #ea580c;
+}
+
+.growth-card .metric-value {
+  color: #c2410c;
+}
+
+/* Category Widget */
+.category-widget .widget-icon {
+  color: #10b981;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #f1f5f9;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.category-sales {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.category-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  width: 96px;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progress-percentage {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  min-width: 48px;
+  text-align: right;
+}
+
+/* Profit Widget */
+.profit-widget .widget-icon {
+  color: #f59e0b;
+}
+
+.profit-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profit-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.revenue-profit-card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.net-profit-card {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.profit-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.profit-value {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.revenue-profit-card .profit-label {
+  color: #d97706;
+}
+
+.revenue-profit-card .profit-value {
+  color: #92400e;
+}
+
+.net-profit-card .profit-label {
+  color: #059669;
+}
+
+.net-profit-card .profit-value {
+  color: #047857;
+}
+
+.profit-growth {
+  display: flex;
+  align-items: center;
+  color: #059669;
+  font-weight: 700;
+}
+
+.profit-margin {
+  font-size: 24px;
+  font-weight: 700;
+  color: #047857;
+}
+
+/* Products Widget */
+.products-widget .widget-icon {
+  color: #8b5cf6;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.product-item:hover {
+  background-color: #f8fafc;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-rank {
+  width: 48px;
+  height: 48px;
+  background-color: #f3e8ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.product-sales {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.product-revenue {
+  text-align: right;
+}
+
+.revenue-value {
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.revenue-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+  
+  .widgets-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .widget {
+    padding: 16px;
+  }
+  
+  .overview-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .profit-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .widget-title {
+    font-size: 18px;
+  }
+  
+  .metric-value {
     font-size: 20px;
-    margin-left: 1%;
-}
-.orders-text3,
-.orders-text4{
-    position: relative;
-    top: 10px;
+  }
+  
+  .profit-value {
+    font-size: 24px;
+  }
+  
+  .category-progress {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+  }
 }

@@ -1,11 +1,26 @@
 import React, { useState, useCallback } from 'react';
-import axios from 'axios';
+import api from '../../api/axios.tsx';
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './signup.css';
 
+interface SignUpFormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+}
+
+interface RegisterResponse {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  token: string;
+}
+
 function SignUp() {
-    const [formData, setFormData] = useState({ 
+    const [formData, setFormData] = useState<SignUpFormData>({ 
         firstName: '', 
         lastName: '', 
         email: '', 
@@ -25,11 +40,32 @@ function SignUp() {
         setSuccess('');
         setLoading(true);
         try {
-            const response = await axios.post(
-                `${import.meta.env.VITE_API_BASE_URL}/user/register`,
+            const response = await api.post(
+                '/user/register',
                 { firstName, lastName, email, password }
             );
-            setSuccess('Registration successful');
+            const {
+              _id,
+              firstName: responseFirstName,
+              lastName: responseLastName,
+              email: responseEmail,
+              token,
+            } = response.data;
+          
+            setSuccess("Registration successful");
+            localStorage.setItem('user', JSON.stringify({
+                _id,
+                firstName,
+                lastName,
+                email,
+                token
+            }));
+                      localStorage.setItem('token', token);
+            localStorage.setItem('userId', _id);
+            localStorage.setItem('firstName', firstName); // Use form data directly
+            localStorage.setItem('lastName', lastName);   // Use form data directly
+            localStorage.setItem('email', email);  
+
             setTimeout(() => {
                 navigate('/login');
             }, 1000);

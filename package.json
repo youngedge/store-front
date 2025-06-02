@@ -20,6 +20,7 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "logrocket": "^8.1.0",
+    "lucide-react": "^0.511.0",
     "mongo": "^0.1.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.15.1",

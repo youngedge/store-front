@@ -20,7 +20,7 @@ app.use(errorHandler);
 
 
 //Routes Middleware
-app.use("/api/user", UserRoute);
+app.use("/user", UserRoute);
 
 //routes
 app.get('/', (_, res) => {
