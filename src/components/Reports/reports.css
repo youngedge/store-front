@@ -16,6 +16,7 @@ body {
 .reports-container {
   min-height: 100vh;
   background-color: #f8fafc;
+  margin-top: 80px; /* Added to create space below the navbar */
 }
 
 /* Layout will be handled by your existing Sidebar and Navbar components */

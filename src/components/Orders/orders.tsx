@@ -163,6 +163,7 @@ const Orders = () => {
       <Sidebar />
       <div className="orders-main">
         <Navbar />
+        <div className="orders-main-content"></div>
         <div className="orders-container">
           {/* Header Section */}
           <div className="orders-header">
@@ -277,6 +278,7 @@ const Orders = () => {
               </select>
             </div>
           </div>
+          
 
           {/* Orders Grid */}
           <div className="orders-grid">

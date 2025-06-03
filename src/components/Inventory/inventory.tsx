@@ -188,6 +188,7 @@ const Inventory = () => {
               return (
                 <div key={index} className={`stat-card ${stat.color}`}>
                   <div className="stat-icon">
+                    {/* Render the correct icon component with size prop */}
                     <IconComponent size={24} />
                   </div>
                   <div className="stat-content">
@@ -274,6 +275,7 @@ const Inventory = () => {
                     <td className="product-info">
                       <div className="product-details">
                         <div className="product-avatar">
+                          {/* Render the Package icon component with size prop */}
                           <Package size={20} />
                         </div>
                         <div>

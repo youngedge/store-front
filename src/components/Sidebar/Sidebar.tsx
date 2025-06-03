@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import logo from '../../assets/logo.png';
 import "./Sidebar.css";
 
 interface SidebarProps {}
@@ -29,11 +30,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
   return (
     <nav className="sidebar">
       <div className="logo-container">
-        <div className="logo-icon">📦</div>
-        <div className="logo-text">
-          <div className="logo-title">inventory management</div>
-          <div className="logo-subtitle">Smart Inventory Solutions</div>
-        </div>
+        <img src={logo} alt="Logo" className="custom-logo" /> {/* Removed logo-text */}
       </div>
       
       <div className="nav-menu">

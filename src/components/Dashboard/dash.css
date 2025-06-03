@@ -24,7 +24,7 @@ body {
 .main-content {
   flex: 1;
   margin-left: 250px; /* Adjust based on your sidebar width */
-  margin-top: 70px;   /* Adjust based on your navbar height */
+  margin-top: 8px;   /* Adjust based on your navbar height */
   padding: 30px;
   background-color: #f8f9fa;
 }

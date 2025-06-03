@@ -204,7 +204,7 @@
   height: 48px;
   border-radius: 12px;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-color-light));
-  color: white;
+  color: blue;
   flex-shrink: 0;
 }
 
