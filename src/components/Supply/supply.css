@@ -27,7 +27,7 @@
 @media (max-width: 768px) {
   .supply-container {
     height: calc(100vh - 70px); /* Smaller navbar on mobile */
-    margin-top: 70px;
+    margin-top: 200px;
   }
 }
 

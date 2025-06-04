@@ -179,3 +179,137 @@
     padding: 1px 4px;
   }
 }
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .search-container {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* Mobile Sidebar */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 999;
+  padding-top: 70px;
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-size: 16px;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    height: auto;
+  }
+  
+  .search-container {
+    display: flex;
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+  
+  .search-input-wrapper {
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .notification-btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .notification-icon {
+    font-size: 20px;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .profile-name {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  
+  .profile-role {
+    display: none;
+  }
+}

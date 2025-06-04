@@ -375,6 +375,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .reports-container {
+    margin-top: 200px;
+  }
   .main-content {
     padding: 16px;
   }
