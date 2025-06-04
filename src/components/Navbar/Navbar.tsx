@@ -6,6 +6,7 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -20,8 +21,41 @@ const Navbar: React.FC<NavbarProps> = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isSidebarOpen]);
 
+const demoSuggestions = [
+  "Apples", "Bananas", "Carrots", "Dell Laptop", "Eggs", "Flour", "Grapes", "Honey",
+  "iPhone 14", "Juice", "Kale", "Lemons", "Milk", "Notebook", "Orange Juice", "Pineapple",
+  "Quinoa", "Rice", "Strawberries", "Tomatoes", "Umbrella", "Vegetable Oil", "Watermelon",
+  "Xbox Controller", "Yogurt", "Zucchini", "Almonds", "Broccoli", "Cheese", "Dates",
+  "Electric Kettle", "Face Wash", "Ginger", "Headphones", "Ice Cream", "Jam", "Keyboard",
+  "Lettuce", "Mango", "Nuts", "Olive Oil", "Peanut Butter", "Quesadilla", "Raspberry",
+  "Spinach", "Tea", "Udon Noodles", "Vanilla Extract", "Waffles", "Xiaomi Phone", "Yam",
+  "Zebra Cake", "AirPods", "Backpack", "Camera", "Desk Lamp", "Earphones", "Fridge",
+  "Gaming Mouse", "HDMI Cable", "Ink Cartridge", "Jeans", "Keyboard Cover", "Lipstick",
+  "Monitor", "Neck Pillow", "Office Chair", "Power Bank", "Router", "Shoes", "Tablet",
+  "USB Drive", "Vacuum Cleaner", "Wireless Charger", "Yoga Mat", "Zipper Bag",
+  "Bluetooth Speaker", "Gaming Chair", "Graphics Card", "Laptop Stand", "Mechanical Keyboard",
+  "Microphone", "NAS Drive", "PC Case", "Processor", "RAM Stick", "Ring Light", "Smartwatch",
+  "SSD Drive", "Surge Protector", "Trackpad", "Tripod", "VR Headset", "Webcam", "WiFi Extender",
+  ...Array.from({ length: 1000 }, (_, i) => `Tech Gadget ${i + 1}`),
+    ...Array.from({ length: 1000 }, (_, i) => `Samsung S${i + 1}`),
+    ...Array.from({ length: 1000 }, (_, i) => `Iphone ${i + 1}`)
+];
+
+  const updateSuggestions = (query: string) => {
+    if (query.trim() === "") {
+      setSuggestions([]);
+    } else {
+      const filtered = demoSuggestions.filter(item =>
+        item.toLowerCase().includes(query.toLowerCase())
+      );
+      setSuggestions(filtered);
+    }
+  };
+
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    const query = e.target.value;
+    setSearchQuery(query);
+    updateSuggestions(query);
   };
 
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -55,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
         <div className="search-container">
           <form onSubmit={handleSearchSubmit} className="search-form">
-            <div className="search-input-wrapper">
+            <div className="search-input-wrapper" style={{ position: "relative" }}>
               <div className="search-icon">🔍</div>
               <input
                 type="text"
@@ -64,6 +98,19 @@ const Navbar: React.FC<NavbarProps> = () => {
                 value={searchQuery}
                 onChange={handleSearchChange}
               />
+              {suggestions.length > 0 && (
+                <ul className="suggestions-dropdown">
+                  {suggestions.map((item, index) => (
+                    <li
+                      key={index}
+                      className="suggestion-item"
+                      onClick={() => setSearchQuery(item)}
+                    >
+                      🔍 {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </form>
         </div>
